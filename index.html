@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>
+    <a href="" class="typewrite" data-period="2000" data-type='[ "ROUTE LOGIC","USING MAZE","DEFAULT DJIKSTRA","ALSO USES BFS"]'>
+      <span class="wrap"></span>
+    </a>
+  </h1>
+
+  <canvas id="grid" width="800" height="800"></canvas>
+
+  <div class="btns">
+    <!-- Button for 'Generate Maze' with original ID -->
+    <button type="button" id="generate-maze" class="button">
+      <div class="button-top">Generate Maze</div>
+      <div class="button-bottom"></div>
+      <div class="button-base"></div>
+    </button>
+
+    <!-- Button for 'Start Pathfinding' with original ID -->
+    <button type="button" id="start-pathfinding" class="button">
+      <div class="button-top">Start Pathfinding</div>
+      <div class="button-bottom"></div>
+      <div class="button-base"></div>
+    </button>
+
+    <!-- Button for 'Run BFS' with original ID -->
+    <button type="button" id="run-bfs" class="button">
+      <div class="button-top">Run BFS</div>
+      <div class="button-bottom"></div>
+      <div class="button-base"></div>
+    </button>
+  </div>
+
+  <h1>
+    <a href="" class="typewrite" data-period="2000" data-type='[ "ALGORITHMS","EXPLAINED"]'>
+      <span class="wrap"></span>
+    </a>
+  </h1>
+
+  <!-- Algorithm Explanation Cards -->
+  <div class="algorithm-container">
+    <div class="algorithm-card">
+      <h3>Dijkstra's Algorithm</h3>
+      <p>A weighted algorithm that guarantees the shortest path by visiting the smallest known distance nodes.</p>
+      <div class="algorithm-insights">
+        <div>
+          <h4 class="strengths">Strengths</h4>
+          <p>Always finds shortest path</p>
+        </div>
+        <div>
+          <h4 class="weaknesses">Weaknesses</h4>
+          <p>Slower, explores all directions</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="algorithm-card">
+      <h3>Breadth-First Search (BFS)</h3>
+      <p>Explores all neighboring nodes at the current depth before moving to the next level using a queue.</p>
+      <div class="algorithm-insights">
+        <div>
+          <h4 class="strengths">Strengths</h4>
+          <p>Shortest path for unweighted graphs</p>
+        </div>
+        <div>
+          <h4 class="weaknesses">Weaknesses</h4>
+          <p>Memory intensive</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="algorithm-card">
+      <h3>Depth-First Search (DFS)</h3>
+      <p>Explores as far as possible along each branch before backtracking, using a stack data structure.</p>
+      <div class="algorithm-insights">
+        <div>
+          <h4 class="strengths">Strengths</h4>
+          <p>Less memory usage</p>
+        </div>
+        <div>
+          <h4 class="weaknesses">Weaknesses</h4>
+          <p>No guaranteed shortest path</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="algorithm-card a-star">
+      <h3>A* Search Algorithm</h3>
+      <div class="algorithm-insights">
+        <div class="strengths">
+          <h4 id="str">Strengths</h4>
+          <p>Optimal and complete if heuristic is admissible.</p>
+        </div>
+        <div class="weaknesses">
+          <h4 id="wek">Weaknesses</h4>
+          <p>Can be slow and memory intensive in large graphs.</p>
+        </div>
+      </div>
+    </div>
+    
+
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

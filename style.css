@@ -1,0 +1,269 @@
+/* Original Body Style */
+body {
+  background-color: #101722; /* Background color unchanged */
+  text-align: center;
+  color: #fff;
+  padding-top: 10em;
+  margin-top: 4em; /* Added margin-top */
+  padding: 5em; /* Padding adjusted */
+  font-family: 'Anonymous Pro', monospace; /* Font added */
+}
+
+/* Global Body */
+body { 
+  margin-top: 4em; 
+  padding: 5em; 
+  color: #f1f1f1; 
+  font-family: 'Anonymous Pro', monospace;
+  background-color: #101722; /* Background changed to black */
+}
+
+/* Typewriter Effect */
+.typewrite > .wrap {
+  border-right: 0.08em solid #fff;
+}
+
+/* Canvas Style */
+canvas {
+  border: 1px solid black;
+  width: 800px;
+  height: 800px;
+}
+
+/* Button Style */
+button {
+  width: 165px;
+  height: 62px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+}
+
+/* 3D Button Effect */
+.button {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  border-width: 0;
+  padding: 0 8px 12px;
+  min-width: 10em;
+  box-sizing: border-box;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding: 8px 16px;
+  transform: translateY(0);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, .25);
+  transition-property: transform;
+  transition-duration: .2s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.button:active .button-top {
+  transform: translateY(6px);
+}
+
+.button-top::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  background-image: radial-gradient(#5e2a6f, #3a1b3d); /* Dark purple gradient */
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, .2), 0 1px 2px 1px rgba(255, 255, 255, .2);
+  transition-property: border-radius, padding, width, transform;
+  transition-duration: .2s;
+}
+
+.button:active .button-top::after {
+  border-radius: 6px;
+  padding: 0 2px;
+}
+
+.button-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 8px / 16px 16px 8px 8px;
+  padding-top: 6px;
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  box-sizing: content-box;
+  background-color: #511c4d; /* Darker shade of purple */
+  background-image: radial-gradient(4px 8px at 4px calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(4px 8px at calc(100% - 4px) calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(16px at -4px 0, white, transparent), radial-gradient(16px at calc(100% + 4px) 0, white, transparent);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .15);
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.button:active .button-bottom {
+  background-color: #3a1b3d;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .35);
+}
+
+/* Button Hover Effects */
+button:hover {
+  transform: scale(1.05);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+}
+
+/* Buttons Container */
+.btns {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: center; /* Center-aligning the buttons */
+  align-items: center; /* Ensures vertical center if needed */
+}
+
+/* Universal Reset */
+* {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Algorithm Explanation Cards */
+.algorithm-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.algorithm-card {
+    background-color: rgba(126, 105, 171, 0.1);
+    border: 1px solid var(--muted-purple);
+    border-radius: 1rem;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.algorithm-card:hover {
+    transform: scale(1.05);
+}
+
+.algorithm-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #a0a0a0;
+}
+
+.algorithm-insights {
+    display: flex;
+    gap: 2rem;
+}
+
+.strengths, .weaknesses {
+    font-size: 1rem;
+}
+
+.strengths {
+    color: #20d0e0;
+}
+
+.weaknesses {
+    color: #e05f61;
+}
+
+/* 3D Text Animation */
+@keyframes textAnimation {
+  0% {
+      transform: rotateX(0deg) rotateY(0deg);
+      opacity: 0;
+  }
+  50% {
+      transform: rotateX(15deg) rotateY(15deg);
+      opacity: 1;
+  }
+  100% {
+      transform: rotateX(0deg) rotateY(0deg);
+      opacity: 1;
+  }
+}
+
+#algorithms-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f0f0f0; /* Light gray */
+  text-align: center;
+  animation: textAnimation 2s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  letter-spacing: 1px;
+}
+/* Centering DFS card */
+.algorithm-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center-card {
+  grid-column: span 2; /* Ensures this card takes up the center position */
+  text-align: center;
+  animation: fadeInUp 0.6s forwards;
+}
+
+.algorithm-card:nth-child(1) { animation-delay: 0.1s; }
+.algorithm-card:nth-child(2) { animation-delay: 0.2s; }
+.algorithm-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Centering the Strengths and Weaknesses */
+.algorithm-insights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  text-align: center; /* Centers the text inside each div */
+}
+
+.algorithm-insights div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%; /* Ensures the width takes full available space */
+}
+
+/* Optional: Adjust the size of the Strengths/Weaknesses divs */
+.algorithm-insights div h4 {
+  font-size: 1.1rem;
+}
+
+.algorithm-card.a-star {
+  grid-column: 1 / -1; /* Makes the card span the full width */
+  text-align: center;
+  animation: fadeInUp 0.6s forwards;
+}
+
+#str{
+  color: #20d0e0;
+}
+
+#wek{
+  color: #e05f61;
+}
