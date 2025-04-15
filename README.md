@@ -34,7 +34,7 @@ According to GitHub's language analysis:
 - CSS: 26.8%
 - HTML: 15.9%
 
-## 📌 Getting Started
+## **_📌 Getting Started_**
 
 To run the project locally:
 
